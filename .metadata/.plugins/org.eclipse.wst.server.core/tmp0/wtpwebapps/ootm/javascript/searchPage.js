@@ -121,6 +121,10 @@ let searchRes = [
     }
 ];
 
+let usp = new URLSearchParams(location.search);
+let searchKeyword = usp.get("searchPageInput");
+document.searchPageForm.searchPageInput.value = searchKeyword;
+
 document.getElementById("searchResCountText").textContent = `검색어와 관련된 ${searchRes.length}개의 상품을 찾았습니다.`;
 
 let searchResultTable = document.getElementById("searchResultTable");
@@ -169,3 +173,4 @@ function focusToSearchBar(){
     document.getElementById("searchPageInput").focus();
     
 }
+

@@ -35,7 +35,7 @@
             <div class="searchPageOuter">
                 <form action="/ootm/jsp/search.jsp" id="searchPageForm" name="searchPageForm">
                     <h1>#</h1>
-                    <input onkeydown="" type="text" id="searchPageInput" name="searchPageInput"/>
+                    <input type="text" id="searchPageInput" name="searchPageInput"/>
                     <div id="searchformOutline">
                         <p>검색어 입력 후 엔터</p>
                     </div>

@@ -13,8 +13,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="headerNav"/>
+		<item key="selection" value="href"/>
 		<list key="findhistory">
+			<item value="href"/>
+			<item value="gref"/>
 			<item value="headerNav"/>
 			<item value="event"/>
 			<item value="h"/>
@@ -28,7 +30,6 @@
 			<item value="context"/>
 			<item value="reload"/>
 			<item value="re"/>
-			<item value="this._carouselDotsDiv"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>

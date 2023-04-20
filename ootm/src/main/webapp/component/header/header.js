@@ -301,11 +301,12 @@ class Header extends HTMLElement{
                         let searchForm = document.createElement("form");
                         searchForm.id = "searchForm";
                         searchForm.name = "searchForm";
+                        searchForm.action = "/ootm/jsp/search.jsp";
                         searchInnerDiv.appendChild(searchForm);
                             let headerSearchInput = document.createElement("input");
                             headerSearchInput.id = "headerSearchInput";
                             headerSearchInput.type = "text";
-                            headerSearchInput.name = "headerSearchInput";
+                            headerSearchInput.name = "searchPageInput";
                             searchForm.appendChild(headerSearchInput);
 
 
@@ -347,7 +348,7 @@ class Header extends HTMLElement{
                 headerNavLogoHolder.id = "headerNavLogoHolder";
                 header.appendChild(headerNavLogoHolder);
                     let logoA = document.createElement("a");
-                    logoA.href = "";
+                    logoA.href = "/ootm/jsp/index.jsp";
                     headerNavLogoHolder.appendChild(logoA);
                         let headerLogoImg = document.createElement("img");
                         headerLogoImg.id="headerLogoImg";
@@ -437,6 +438,9 @@ class Header extends HTMLElement{
                     let mallSVGPath = document.createElementNS("http://www.w3.org/2000/svg","path");
                     mallSVGPath.setAttribute("d","M190 1016q-37.175 0-64.088-27.206Q99 961.588 99 924V414q0-37.588 26.912-64.794Q152.825 322 190 322h92q0-81 55.315-139 55.316-58 137.31-58 81.995 0 142.685 57.888Q678 240.775 678 322h92q37.588 0 64.794 27.206Q862 376.412 862 414v510q0 37.588-27.206 64.794Q807.588 1016 770 1016H190Zm0-92h580V414H190v510Zm289.625-262q81.995 0 142.685-59.953Q683 542.095 683 459h-91q0 48-32.534 80-32.535 32-79.584 32-47.049 0-79.465-32.5Q368 506 368 459h-91q0 83.34 60.315 143.17Q397.631 662 479.625 662ZM373 322h214q0-47-30.034-76-30.035-29-77.084-29-47.049 0-76.965 29.333Q373 275.667 373 322ZM190 924V414v510Z");
                     mallSVG.appendChild(mallSVGPath);
+                    mallSVG.addEventListener("click", ()=>{
+						location.href = "/ootm/jsp/basket.jsp";
+					});
                     this._headerNavIconMenu.appendChild(mallSVG);
 
                     let searchSVG = document.createElementNS("http://www.w3.org/2000/svg","svg");
