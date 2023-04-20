@@ -30,7 +30,7 @@
         <header-component logoDark="false" logoHoverDark="true"></header-component>
 
         <section id="mainPageCarouselSection">
-            <carousel-component>
+            <carousel-component auto="5000">
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>

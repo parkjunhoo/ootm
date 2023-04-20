@@ -4,7 +4,7 @@ class Carousel extends HTMLElement{
 		this._index = 0;
 		this._itemContainer = null;
 		this._count = 0;
-		this.dots = "";
+		this._dots = null;
 	}
 	
     connectedCallback(){
@@ -39,8 +39,8 @@ class Carousel extends HTMLElement{
         this._itemContainer = document.createElement("div");
         this._itemContainer.classList.add("carouselList")
 
-        let dotsDiv = document.createElement('div');
-        dotsDiv.classList.add("carouselDotsDiv")
+        let carouselDotsDiv = document.createElement('div');
+        carouselDotsDiv.classList.add("carouselDotsDiv")
 
         let arrowsDiv = document.createElement('div');
         arrowsDiv.classList.add("carouselArrowsDiv");
@@ -66,7 +66,7 @@ class Carousel extends HTMLElement{
             _itemList.forEach((i)=>{
                 this._itemContainer.appendChild(i);
             })
-        this.appendChild(dotsDiv);
+        this.appendChild(carouselDotsDiv);
 
         this.appendChild(arrowsDiv);
             arrowsDiv.appendChild(preArrowBtn);
@@ -79,16 +79,32 @@ class Carousel extends HTMLElement{
 
             let dotBtnDiv = document.createElement("div");
             let dot = document.createElement("div");
-
+			
             dotBtnDiv.classList.add("carouselDotBtn");
             dot.classList.add("carouselDot");
+            if(this._index == i){
+				dot.classList.add("carouselSelectedDot");
+			}
             dotBtnDiv.addEventListener('click', () => {
                 this.dotMove(i);
             });
 
-            dotsDiv.appendChild(dotBtnDiv);
+            carouselDotsDiv.appendChild(dotBtnDiv);
+            this._dots = carouselDotsDiv.children;
             dotBtnDiv.appendChild(dot);
         }
+        
+        if(this.hasAttribute("auto")){
+			setInterval(()=>{
+				let next = this._index + 1;
+				if(next >= this._count){
+					this._index = 0;
+				}else{
+					this._index++;
+				}
+				this.move();
+			},parseInt(this.getAttribute("auto")));
+		}
     }
 
 
@@ -119,6 +135,16 @@ class Carousel extends HTMLElement{
      * 현재 index로 itemContainer의 left값을 조정해 화면에 보이게 이동시킵니다.
      */
     move(){
+		let count = this._dots.length;
+		for(let i=0; i<count; i++){
+			if(i == this._index){
+				this._dots[i].firstElementChild.classList.add("carouselSelectedDot");
+			}else{
+				this._dots[i].firstElementChild.classList.remove("carouselSelectedDot");
+			}
+			
+		}
+		
         this._itemContainer.style.left = `-${this._index*100}%`;
     }
 }

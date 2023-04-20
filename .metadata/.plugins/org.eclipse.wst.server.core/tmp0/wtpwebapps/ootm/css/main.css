@@ -174,7 +174,7 @@ section{
     width: 100vw;
     height: 100vh;
     background-color: white;
-    background-image: url("../resources/images/bg0.png");
+    background-image: url("/ootm/images/bg0.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +184,7 @@ section{
     width: 100vw;
     height: 100vh;
     background-color: white;
-    background-image: url("../resources/images/bg1.png");
+    background-image: url("/ootm/images/bg1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

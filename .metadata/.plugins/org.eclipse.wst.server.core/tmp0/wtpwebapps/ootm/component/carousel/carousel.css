@@ -84,7 +84,7 @@ carousel-component{
     cursor: pointer;
     background-color: transparent;
     border: none;
-    padding:10px;
+    padding:10px 5px;
     box-sizing: content-box;
     width:fit-content;
     height: 4px;
@@ -92,11 +92,20 @@ carousel-component{
 }
 
 .carouselDot{
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid white;
-    width:4px;
-    height: 4px;
+    width:3px;
+    height: 3px;
     background-color: white;
     transition: 1s;
     opacity: .6;
+}
+
+.carouselSelectedDot{
+	border-radius: 0px;
+    width:15px;
+    height: 2px;
+    background-color: white;
+    transition: 1s;
+    opacity: 1;
 }
