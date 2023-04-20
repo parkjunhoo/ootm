@@ -17,7 +17,7 @@ header{
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 20px;
-    z-index: 990;
+    z-index: 970;
     overflow: visible;
 }
 header p{
@@ -305,15 +305,122 @@ header p{
     height: 2px;
     transition: 0.5s ease;
 }
-#headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(1){
+
+
+#drawer{
+	position: fixed;
+	z-index: 980;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: white;
+	overflow-y: scroll;
+	transform: translateX(100%);
+}
+
+.openDrawerAnim{
+    animation: openDrawer .5s forwards;
+}
+.closeDrawerAnim{
+    animation: closeDrawer .5s forwards;
+}
+
+@keyframes openDrawer {
+    0%{
+		transform: translateX(100%);
+    }
+    
+    100%{
+		transform: translateX(0);
+    }
+}
+@keyframes closeDrawer {
+    0%{
+		transform:translateX(0);
+    }
+    
+    100%{
+		transform:  translateX(100%);
+    }
+}
+
+
+#drawer #headerNavIconMenu{
+	display:flex;
+	max-width:100%;
+	width:100%;
+	fill:black;
+}
+
+#drawer #headerNavTextMenu{
+	display:block;
+	max-width:100%;
+	width:100%;
+	margin: 0 0 0 auto;
+	justify-content: end;
+	fill:black;
+}
+
+#drawer #headerNavTextMenu .dropListHeader{
+	display: block;
+}
+#drawer #headerNavTextMenu .dropListHeader li>div{
+	height: fit-content;
+	padding: 0;
+}
+#drawer #headerNavTextMenu .dropListHeader li>div p{
+	color: #bcbcbc;
+	font-weight: 700;
+	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
+	font-size : 13px;
+	padding: 12px 0 12px 3vw;
+}
+#drawer .dropList{
+	width:100%;
+	height:auto;
+	opacity:1;
+}
+#drawer .dropList *{
+	pointer-events: auto;
+	height:auto;
+}
+header #drawer .dropList p{
+	padding: 6px 0 6px 3vw;
+	pointer-events: auto;
+	font-weight: 500;
+	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
+	font-size : 22px;
+	color: black;
+}
+
+
+#drawer #headerNavMenuBtn{
+	display:flex;
+	height:80px;
+	position: fixed;
+	right:0;
+	top:30px;
+	fill:black;
+}
+#drawer .headerMenuBtnIcon{
+	background-color: black;
+}
+
+#drawer .menuListUnderline{
+	display:none;
+}
+
+#drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(1){
     position: absolute;
+    z-index : 985;
     transform: rotate(45deg);
 }
-#headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(2){
+#drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(2){
     position: absolute;
     top:0;
     bottom: 10px;
-    
+    z-index : 985;
     transform: rotate(-45deg);
 }
 
@@ -364,6 +471,15 @@ header:hover #headerNavIconMenu svg{
         display: none;
         pointer-events: none;
     }
+    #drawer #headerNavIconMenu{
+        width: 100%;
+        display: block;
+        pointer-events: auto;
+    }
+    #drawer #headerNavIconMenu{
+	display:flex;
+	width:100%;
+	}
     #searchBar{
         flex-wrap: wrap;
         height: fit-content;
@@ -387,9 +503,17 @@ header:hover #headerNavIconMenu svg{
         width: 0px;
         visibility: hidden;
     }
-
+    #drawer #headerNavTextMenu{
+        width: 100%;
+        visibility: visible;
+    }
+    #drawer #headerNavIconMenu{
+		display:flex;
+		width:100%;
+		visibility: visible;
+	}
     #headerNavMenuBtn{
-        position: relative;
+        z-index: 985;
         display: flex;
         flex-direction: column;
     }

@@ -13,22 +13,35 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Context"/>
+		<item key="selection" value="headerNav"/>
 		<list key="findhistory">
+			<item value="headerNav"/>
+			<item value="event"/>
+			<item value="h"/>
+			<item value="this._headerNavMenuBtn"/>
+			<item value="this_headerNavMenuBtn"/>
+			<item value="headerNavMenuBtn"/>
+			<item value="z-index"/>
+			<item value="headerNavIconMenu"/>
+			<item value="headerNavTextMenu"/>
+			<item value="_headerNavTextMenu"/>
 			<item value="context"/>
 			<item value="reload"/>
 			<item value="re"/>
 			<item value="this._carouselDotsDiv"/>
 		</list>
 		<list key="replacehistory">
+			<item value="this._headerNavMenuBtn"/>
+			<item value="this_headerNavMenuBtn"/>
+			<item value="this._headerNavIconMenu"/>
 			<item value="let carouselDotsDiv"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="819"/>
-		<item key="DIALOG_Y_ORIGIN" value="292"/>
+		<item key="DIALOG_X_ORIGIN" value="164"/>
+		<item key="DIALOG_Y_ORIGIN" value="302"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_HEIGHT" value="400"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
