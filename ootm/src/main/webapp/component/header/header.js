@@ -26,10 +26,143 @@ class Header extends HTMLElement{
         this._logoSrc = "/ootm/images/logo.png";
         this._logoDarkSrc = "/ootm/images/logoDark.png";
         
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/ootm/get-header-menu', false);
-        xhr.send();
-        this._textMenuList = JSON.parse(xhr.responseText);
+        this._textMenuList = [
+            {
+                name:"New(10% SALE)",
+                subMenu:[
+                    {
+                        name:"New(10% SALE)",
+                        korName:"신상(10% SALE)",
+                        highlight:true
+                    }
+                ]
+            },
+            {
+                name:"Best",
+                subMenu:[
+                    {
+                        name:"Best",
+                        korName:"베스트",
+                        highlight:true
+                    }
+                ]
+            },
+            {
+                name:"Outer",
+                subMenu:[
+                    {
+                        name:"Outer",
+                        korName:"아우터",
+                        highlight:true
+                    }
+                ]
+            },
+            {
+                name:"Top",
+                subMenu:[
+                    {
+                        name:"Shirt",
+                        korName:"셔츠",
+                        highlight:false
+                    },
+                    {
+                        name:"Long Sleeve",
+                        korName:"긴팔",
+                        highlight:true
+                    },
+                    {
+                        name:"Knit",
+                        korName:"니트",
+                        highlight:false
+                    },
+                    {
+                        name:"Short Sleeve",
+                        korName:"반팔",
+                        highlight:false
+                    }
+                ]
+            },
+            {
+                name:"Botton",
+                subMenu:[
+                    {
+                        name:"Jean",
+                        korName:"진",
+                        highlight:false
+                    },
+                    {
+                        name:"Pants",
+                        korName:"팬츠",
+                        highlight:true
+                    },
+                    {
+                        name:"Short Guys",
+                        korName:"숏 가이즈",
+                        highlight:false
+                    }
+                ]
+            },
+            {
+                name:"Acc",
+                subMenu:[
+                    {
+                        name:"Shoes",
+                        korName:"슈즈",
+                        highlight:true
+                    },
+                    {
+                        name:"Bag",
+                        korName:"가방",
+                        highlight:false
+                    },
+                    {
+                        name:"Accessories",
+                        korName:"액세서리",
+                        highlight:false
+                    },
+                    {
+                        name:"Season off",
+                        korName:"시즌오프",
+                        highlight:false
+                    }
+                ]
+            },
+            {
+                name:"Suit",
+                subMenu:[
+                    {
+                        name:"Suit",
+                        korName:"수트",
+                        highlight:true
+                    }
+                ]
+            },
+            {
+                name:"SET EVENT",
+                subMenu:[
+                    {
+                        name:"SET EVENT",
+                        korName:"세트 이벤트",
+                        highlight:true
+                    }
+                ]
+            }
+        ];
+
+        this._recommendTags = [
+            {
+                name:"#9부팬츠",
+                link:"/"
+            },
+            {
+                name:"#자체제작",
+                link:"/"
+            },
+            {
+                name:"#맨투맨",
+                link:"/"
+            }
+        ];
         
         
         this._recommendTags = [

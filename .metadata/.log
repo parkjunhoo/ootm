@@ -2791,3 +2791,18 @@ java.lang.IllegalArgumentException: Argument not valid
 
 !ENTRY org.eclipse.wst.server.core 4 0 2023-04-22 20:12:00.435
 !MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-22 21:02:38.177
+!MESSAGE [Info]	ESLint server running in node v16.14.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-22 21:46:08.833
+!MESSAGE [Info]	ESLint server running in node v16.14.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-22 21:47:16.033
+!MESSAGE [Info]	ESLint server running in node v16.14.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-22 21:47:43.896
+!MESSAGE [Info]	ESLint server running in node v16.14.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-22 22:22:18.546
+!MESSAGE [Info]	ESLint server running in node v16.14.2
