@@ -13,13 +13,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="searchExitBtnDiv"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="highlight"/>
+			<item value="highlight\"/>
+			<item value="searchExit"/>
+			<item value="org.json.simple"/>
 			<item value="searchExitBtnDiv"/>
 			<item value="SearchExitBtn"/>
 			<item value="headerMenuBt"/>
 			<item value="tColor"/>
-			<item value="searchExit"/>
 			<item value="href"/>
 			<item value="gref"/>
 			<item value="headerNav"/>
@@ -27,9 +30,6 @@
 			<item value="h"/>
 			<item value="this._headerNavMenuBtn"/>
 			<item value="this_headerNavMenuBtn"/>
-			<item value="headerNavMenuBtn"/>
-			<item value="z-index"/>
-			<item value="headerNavIconMenu"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>
