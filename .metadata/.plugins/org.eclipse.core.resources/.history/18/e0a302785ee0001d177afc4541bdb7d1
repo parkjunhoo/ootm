@@ -1,0 +1,12 @@
+package dao;
+
+public class HeaderMenuDTO {
+	private String name;
+	private ArrayList<>
+}
+
+class HeaderSubMenuDTO{
+	private String name;
+	private String korName;
+	private boolean highlight;
+}

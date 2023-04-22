@@ -1,0 +1,31 @@
+package dao.headerMenu;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import org.json.simple;
+
+public class HeaderMenuToJson {
+	public ArrayList<HashMap<String, Object>> toJson(ArrayList<HeaderMenuDTO> list){
+		ArrayList<HashMap<String,Object>> result = new ArrayList<HashMap<String,Object>>();
+		for(HeaderMenuDTO dto : list) {
+			HashMap<String, Object> data = new HashMap<String, Object>();
+			HashMap<String, Object> subMenuData = new HashMap<String, Object>();
+			data.put("id", dto.getId());
+			data.put("name", dto.getName());
+			data.put("idx", dto.getIdx());
+			for(HeaderSubMenuDTO sDTO : dto.getSubMenu()) {
+				subMenuData.put("id", sDTO.getId());
+				subMenuData.put("menuId", sDTO.getMenuId());
+				subMenuData.put("name", sDTO.getName());
+				subMenuData.put("korName", sDTO.getKorName());
+				subMenuData.put("idx", sDTO.getIdx());
+				subMenuData.put("highlight", sDTO.getHighlight());
+			}
+			data.put("subMenu", subMenuData);
+			result.add(data);
+			.JSONObject
+		}
+		
+		return result;
+	}
+}

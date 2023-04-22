@@ -1,0 +1,15 @@
+package dao.headerMenu;
+
+import java.util.ArrayList;
+
+public class test {
+
+	public static void main(String[] args) {
+		HeaderMenuDAO dao = new HeaderMenuDAOImpl();
+		ArrayList<HeaderMenuDTO> list = dao.select();
+		for(HeaderMenuDTO dto : list) {
+			System.out.println(dto.getName());
+		}
+	}
+
+}

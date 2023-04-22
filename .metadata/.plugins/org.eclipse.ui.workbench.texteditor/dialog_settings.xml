@@ -13,8 +13,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="href"/>
+		<item key="selection" value="searchExitBtnDiv"/>
 		<list key="findhistory">
+			<item value="searchExitBtnDiv"/>
+			<item value="SearchExitBtn"/>
+			<item value="headerMenuBt"/>
+			<item value="tColor"/>
+			<item value="searchExit"/>
 			<item value="href"/>
 			<item value="gref"/>
 			<item value="headerNav"/>
@@ -25,11 +30,6 @@
 			<item value="headerNavMenuBtn"/>
 			<item value="z-index"/>
 			<item value="headerNavIconMenu"/>
-			<item value="headerNavTextMenu"/>
-			<item value="_headerNavTextMenu"/>
-			<item value="context"/>
-			<item value="reload"/>
-			<item value="re"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>

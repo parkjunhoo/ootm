@@ -25,129 +25,13 @@ class Header extends HTMLElement{
    		
         this._logoSrc = "/ootm/images/logo.png";
         this._logoDarkSrc = "/ootm/images/logoDark.png";
-        this._textMenuList = [
-            {
-                name:"New(10% SALE)",
-                subMenu:[
-                    {
-                        name:"New(10% SALE)",
-                        korName:"신상(10% SALE)",
-                        hightlight:true
-                    }
-                ]
-            },
-            {
-                name:"Best",
-                subMenu:[
-                    {
-                        name:"Best",
-                        korName:"베스트",
-                        hightlight:true
-                    }
-                ]
-            },
-            {
-                name:"Outer",
-                subMenu:[
-                    {
-                        name:"Outer",
-                        korName:"아우터",
-                        hightlight:true
-                    }
-                ]
-            },
-            {
-                name:"Top",
-                subMenu:[
-                    {
-                        name:"Shirt",
-                        korName:"셔츠",
-                        hightlight:false
-                    },
-                    {
-                        name:"Long Sleeve",
-                        korName:"긴팔",
-                        hightlight:true
-                    },
-                    {
-                        name:"Knit",
-                        korName:"니트",
-                        hightlight:false
-                    },
-                    {
-                        name:"Short Sleeve",
-                        korName:"반팔",
-                        hightlight:false
-                    }
-                ]
-            },
-            {
-                name:"Botton",
-                subMenu:[
-                    {
-                        name:"Jean",
-                        korName:"진",
-                        hightlight:false
-                    },
-                    {
-                        name:"Pants",
-                        korName:"팬츠",
-                        hightlight:true
-                    },
-                    {
-                        name:"Short Guys",
-                        korName:"숏 가이즈",
-                        hightlight:false
-                    }
-                ]
-            },
-            {
-                name:"Acc",
-                subMenu:[
-                    {
-                        name:"Shoes",
-                        korName:"슈즈",
-                        hightlight:true
-                    },
-                    {
-                        name:"Bag",
-                        korName:"가방",
-                        hightlight:false
-                    },
-                    {
-                        name:"Accessories",
-                        korName:"액세서리",
-                        hightlight:false
-                    },
-                    {
-                        name:"Season off",
-                        korName:"시즌오프",
-                        hightlight:false
-                    }
-                ]
-            },
-            {
-                name:"Suit",
-                subMenu:[
-                    {
-                        name:"Suit",
-                        korName:"수트",
-                        hightlight:true
-                    }
-                ]
-            },
-            {
-                name:"SET EVENT",
-                subMenu:[
-                    {
-                        name:"SET EVENT",
-                        korName:"세트 이벤트",
-                        hightlight:true
-                    }
-                ]
-            }
-        ];
-
+        
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/ootm/get-header-menu', false);
+        xhr.send();
+        this._textMenuList = JSON.parse(xhr.responseText);
+        
+        
         this._recommendTags = [
             {
                 name:"#9부팬츠",
@@ -406,7 +290,7 @@ class Header extends HTMLElement{
                                 li.addEventListener("mouseleave", () =>{
                                     p.textContent = this._textMenuList[i].subMenu[o].name;
                                 });
-                                if(this._textMenuList[i].subMenu[o].hightlight)
+                                if(this._textMenuList[i].subMenu[o].highlight)
                                 {
                                     p.style.color= "red";
                                 }else if(this.hasAttribute("smTextColor")){

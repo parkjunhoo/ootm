@@ -1,0 +1,53 @@
+package dao.headerMenu;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import util.DBUtil;
+
+public class HeaderMenuDAOImpl implements HeaderMenuDAO{
+
+	@Override
+	public int insert(HeaderMenuDTO headerMenu) {
+		return 0;
+	}
+
+	@Override
+	public ArrayList<HeaderMenuDTO> select() {
+		ArrayList<HeaderMenuDTO> result = null;
+		ArrayList<HeaderSubMenuDTO> subMenuList = null; 
+		
+		String sql = "select * from header_sub_menu";
+		
+		Connection con = null;
+		PreparedStatement ptmt = null;
+		ResultSet rs = null;
+		
+		
+		try {
+			con = DBUtil.getConnect("localhost", "3306", "exam", "exam", "ootp");
+			ptmt = con.prepareStatement(sql);
+			rs = ptmt.executeQuery();
+			
+			HeaderSubMenuDTO subDTO = null;
+			while(rs.next()) {
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.close(rs, ptmt, con);
+		}
+		
+		return null;
+	}
+
+	@Override
+	public int delete(String id) {
+		return 0;
+	}
+
+}

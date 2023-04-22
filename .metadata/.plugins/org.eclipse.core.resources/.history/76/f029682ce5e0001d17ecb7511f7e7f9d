@@ -1,0 +1,14 @@
+package dao.headerMenu;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HeaderMenuToJson {
+	public ArrayList<HashMap<String, Object>> toJson(ArrayList<HeaderMenuDTO> list){
+		ArrayList<HashMap<String,Object>> result = new ArrayList<HashMap<String,Object>>();
+		for(HeaderMenuDTO dto : list) {
+			HashMap<String, Object> data = new HashMap<String, Object>();
+			
+		}
+	}
+}

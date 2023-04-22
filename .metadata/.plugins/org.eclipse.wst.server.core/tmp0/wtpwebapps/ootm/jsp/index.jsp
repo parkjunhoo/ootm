@@ -26,8 +26,9 @@
     </head>
 
     <body>
-
+		
         <header-component logoDark="false" logoHoverDark="true"></header-component>
+		
 
         <section id="mainPageCarouselSection">
             <carousel-component auto="1000">

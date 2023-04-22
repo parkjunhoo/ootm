@@ -1,0 +1,5 @@
+package dao.headerMenu;
+
+public inerface HeaderMenuDAO {
+		public int insert(HeaderMenuDTO headerMenu);
+}

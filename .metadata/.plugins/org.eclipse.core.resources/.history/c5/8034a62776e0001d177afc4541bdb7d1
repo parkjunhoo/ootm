@@ -1,0 +1,10 @@
+package dao.headerMenu;
+
+public class test {
+
+	public static void main(String[] args) {
+		HeaderMenuDAO dao = new HeaderMenuDAOImpl();
+		System.out.println(dao.insert());
+	}
+
+}

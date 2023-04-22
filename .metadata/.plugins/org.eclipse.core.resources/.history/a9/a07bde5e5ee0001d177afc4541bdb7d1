@@ -1,0 +1,6 @@
+package dao;
+
+public class HeaderMenuDTO {
+	private String name;
+	
+}

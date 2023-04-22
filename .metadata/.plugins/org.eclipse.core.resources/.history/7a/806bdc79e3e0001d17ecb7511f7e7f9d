@@ -1,0 +1,34 @@
+package controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.headerMenu.HeaderMenuDAO;
+import dao.headerMenu.HeaderMenuDAOImpl;
+import dao.headerMenu.HeaderMenuDTO;
+
+@WebServlet("/SelectHeaderMenuServlet")
+public class SelectHeaderMenuServletextends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HeaderMenuDAO dao = new HeaderMenuDAOImpl();
+		
+		ArrayList<HeaderMenuDTO> list = dao.select();		
+		
+		response.setContentType("text/html;charset=UTF-8");
+		
+		request.setAttribute("DTOList", list);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/component/header/header.jsp");
+		rd.forward(request, response);
+	}
+
+}

@@ -1,0 +1,79 @@
+package dao.headerMenu;
+
+import java.util.ArrayList;
+
+public class HeaderMenuDTO {
+	private int id;
+	private String name;
+	private ArrayList<HeaderSubMenuDTO> subMenu;
+	
+	public HeaderMenuDTO() {
+	}
+	
+	public HeaderMenuDTO(int id ,String name, ArrayList<HeaderSubMenuDTO> subMenu) {
+		this.name = name;
+		this.subMenu = subMenu;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<HeaderSubMenuDTO> getSubMenu() {
+		return subMenu;
+	}
+
+	public void setSubMenu(ArrayList<HeaderSubMenuDTO> subMenu) {
+		this.subMenu = subMenu;
+	}
+	
+	
+}
+
+
+class HeaderSubMenuDTO{
+	private String name;
+	private String korName;
+	private boolean highlight;
+	
+	
+	
+	public HeaderSubMenuDTO() {
+	}
+	
+	public HeaderSubMenuDTO(String name, String korName, boolean highlight) {
+		this.name = name;
+		this.korName = korName;
+		this.highlight = highlight;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getKorName() {
+		return korName;
+	}
+
+	public void setKorName(String korName) {
+		this.korName = korName;
+	}
+
+	public boolean isHighlight() {
+		return highlight;
+	}
+
+	public void setHighlight(boolean highlight) {
+		this.highlight = highlight;
+	}
+	
+	
+}

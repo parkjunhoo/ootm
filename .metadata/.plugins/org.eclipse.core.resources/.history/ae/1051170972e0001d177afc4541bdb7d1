@@ -1,0 +1,44 @@
+package dao.headerMenu;
+
+public class HeaderSubMenuDTO {
+
+	private int id;
+	private int menuId;
+	private String name;
+	private int idx;
+	private boolean highlight;
+	private String korName;
+
+	public HeaderSubMenuDTO() {
+	}
+
+	public HeaderSubMenuDTO(int id, int menuId, String name, int idx, String korName, boolean highlight) {
+		this.name = name;
+		this.korName = korName;
+		this.highlight = highlight;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getKorName() {
+		return korName;
+	}
+
+	public void setKorName(String korName) {
+		this.korName = korName;
+	}
+
+	public boolean isHighlight() {
+		return highlight;
+	}
+
+	public void setHighlight(boolean highlight) {
+		this.highlight = highlight;
+	}
+}

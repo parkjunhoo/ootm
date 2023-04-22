@@ -1,0 +1,43 @@
+package controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import dao.headerMenu.HeaderMenuDAOImpl;
+import dao.headerMenu.HeaderMenuDTO;
+
+@WebServlet("/get-header-menu")
+public class HeaderMenuSelectJsonServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<HeaderMenuDTO> list = new HeaderMenuDAOImpl().select();
+		JSONArray jsonList = new JSONArray();
+		
+		HashMap<String, Object> map = new HashMap<>();
+		for(HeaderMenuDTO hmDTO : list) {
+			map.put("id", hmDTO.getId());
+			map.put("name", hmDTO.getName());
+			map.put("idx", hmDTO.getIdx());
+			
+			ArrayList<HeaderSubMenuDTO> subList = hmDTO.getSubMenu();
+			for(headerSubMenuDTO hsmDTO :hmDTO.getSubMenu()) {
+				
+			}
+		}
+	}
+
+}

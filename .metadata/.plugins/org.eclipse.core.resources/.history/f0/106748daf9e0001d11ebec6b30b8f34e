@@ -1,0 +1,41 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.simple.JSONObject;
+
+import dao.headerMenu.HeaderMenuDAOImpl;
+import dao.headerMenu.HeaderMenuDTO;
+import dao.headerMenu.HeaderSubMenuDTO;
+
+public class test {
+
+	public static void main(String[] args) {
+		ArrayList<HeaderMenuDTO> list = new HeaderMenuDAOImpl().select();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		
+		for(HeaderMenuDTO hmDTO : list) {
+			map.put("id", hmDTO.getId());
+			map.put("name", hmDTO.getName());
+			map.put("idx", hmDTO.getIdx());
+			ArrayList<HeaderSubMenuDTO> subList = hmDTO.getSubMenu();
+			
+			ArrayList<HashMap<String, Object>> subMapList = new ArrayList<HashMap<String, Object>>();
+			for(HeaderSubMenuDTO hsmDTO : subList) {
+				HashMap<String, Object> subMap = new HashMap();
+				subMap.put("id", hsmDTO.getId());
+				subMap.put("menuId", hsmDTO.getMenuId());
+				subMap.put("name", hsmDTO.getName());
+				subMap.put("korName", hsmDTO.getKorName());
+				subMap.put("idx", hsmDTO.getIdx());
+				subMap.put("highlight", hsmDTO.getHighlight());
+				subMapList.add(subMap);
+			}
+			map.put("subMenu", subMapList);
+			String jsonstr = JSONObject.toJSONString(map);
+			System.out.println(jsonstr);
+		}
+	}
+
+}

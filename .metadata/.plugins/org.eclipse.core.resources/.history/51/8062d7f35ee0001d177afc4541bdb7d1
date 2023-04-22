@@ -1,0 +1,7 @@
+package dao.headerMenu;
+
+public interface HeaderMenuDAO {
+	public int insert(HeaderMenuDTO headerMenu);
+	public ArrayList<HeaderMenuDTO> select();
+	
+}
