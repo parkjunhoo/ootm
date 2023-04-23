@@ -29,67 +29,15 @@ h2{
 	padding: 0 60px;
 	margin: 0 auto;
 }
-
-
-
-ul{
-	line-height: 240%;
-	padding: 0%;
-	margin-top:50px;
-	list-style: none;
-}
-
-hr{
-	height: 1.5px;
-	background-color: black;
-	color: black;
-}
-
-h4{
-	font-size: 18px;		
-}
-.current{
-	font-weight: 600;
+.all-margin:before, .all-margin:after {
+    content: '';
+    display: table;
 }
 a{
 	text-decoration:none;
-	color: #222222;
+	color: #222;
 }
-.account-menu a{
-	font-size: 13px;
+ul, li{
+	list-style: none;
 }
-.page-navigation li a{ 
-  font-size: 15px;
-  margin-right: 15px;
-  padding: 5px 0;
-  position: relative;
- }
-.page-navigation li a:after {
-  background-color: #222;
-    content: '';
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    transition: width 0.25s ease-out;
-}
-.page-navigation li a:hover:after { width: 100%; }
 
-.item .value{
-	font-size: 28px;
-	font-weight: 600;
-	position: relative;
-	flex-wrap: wrap;
-}
-.membership-grade .value{
-	font-size: 32px;
-	font-weight: 700;
-}
-.info-list li{
-	font-size: 13px;
-	margin-left: 10px;
-}
-a:-webkit-any-link {
-	cursor: pointer;
-}

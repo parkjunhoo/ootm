@@ -24,7 +24,7 @@
         <link rel="stylesheet" type="text/css" href="/ootm/css/index.css"/>
         
         
-        <title>3조프로젝트</title>
+        <title>OOTM - 이달의 착장</title>
     </head>
 
     <body>

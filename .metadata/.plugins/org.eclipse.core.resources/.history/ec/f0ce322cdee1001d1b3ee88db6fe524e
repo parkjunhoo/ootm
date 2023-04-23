@@ -21,6 +21,7 @@ header{
     overflow: visible;
 }
 header p{
+	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
     font-size: 13px;
 }
 
@@ -97,7 +98,7 @@ header p{
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: center;
     padding: 0 25px 0 25px;
 }
 
@@ -152,16 +153,14 @@ header p{
     top:0;
     left:0;
 }
-.SearchExitBtn{
-    top:0;
-    left:0;
+#searchExitBtnDiv{
     position: absolute;
     display: flex;
     justify-content: end;
     z-index: 994;
     width: 100%;
 }
-.SearchExitBtn span{
+.searchExitBtn{
     padding: 20px 40px 0 0;
     font-size: 30px;
     cursor: pointer;
@@ -289,7 +288,7 @@ header p{
 /* 버거메뉴 버튼 width 작을때나타남*/
 #headerNavMenuBtn{
     display: none;
-    width: 50px;
+    width: 80px;
     height: 35px;
     cursor: pointer;
     align-self: center;
@@ -308,32 +307,29 @@ header p{
 
 
 #drawer{
-	display:none;
 	position: fixed;
 	z-index: 980;
 	top:0;
 	left:0;
 	width:100%;
+	max-width: 100%;
 	height:100%;
 	background-color: white;
-	transition: .5s;
+	overflow-x:hidden;
 	overflow-y: scroll;
+	transform: translateX(100%);
 }
 
 .openDrawerAnim{
     animation: openDrawer .5s forwards;
 }
 .closeDrawerAnim{
-    animation: openDrawer .5s forwards;
+    animation: closeDrawer .5s forwards;
 }
 
 @keyframes openDrawer {
     0%{
 		transform: translateX(100%);
-    }
-    
-    1%{
-    	display: fixed;
     }
     
     100%{
@@ -347,7 +343,6 @@ header p{
     
     100%{
 		transform:  translateX(100%);
-		display: none;
     }
 }
 
@@ -387,6 +382,9 @@ header p{
 	height:auto;
 	opacity:1;
 }
+#drawer .dropList li{
+	width: 50%;
+}
 #drawer .dropList *{
 	pointer-events: auto;
 	height:auto;
@@ -403,7 +401,8 @@ header #drawer .dropList p{
 
 #drawer #headerNavMenuBtn{
 	display:flex;
-	height:80px;
+	flex-direction : column;
+	height:30px;
 	position: fixed;
 	right:0;
 	top:30px;
@@ -519,9 +518,42 @@ header:hover #headerNavIconMenu svg{
 		visibility: visible;
 	}
     #headerNavMenuBtn{
-        position: absolute;
         z-index: 985;
         display: flex;
         flex-direction: column;
     }
 }
+
+
+#headerNavTextMenu ul , #headerNavTextMenu li{
+	list-style: none;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#headerNavTextMenu ul , #headerNavTextMenu ll {
+	list-style: none;
+}
+
+
+ul , li{
+	
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
