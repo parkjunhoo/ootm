@@ -559,7 +559,7 @@ class Header extends HTMLElement{
 		this._isDrawOpen = true;
 		this._drawer.classList.remove("closeDrawerAnim");
 		this._drawer.classList.add("openDrawerAnim");
-		document.body.style.overflowY = "hidden";
+		document.body.style.overflow = "hidden";
        	this._drawer.appendChild(this._headerNavIconMenu);
        	this._drawer.appendChild(this._headerNavMenuBtn);
        	this._drawer.appendChild(this._headerNavTextMenu);
@@ -569,7 +569,7 @@ class Header extends HTMLElement{
 		this._isDrawOpen = false;
 		this._drawer.classList.remove("openDrawerAnim");
 		this._drawer.classList.add("closeDrawerAnim");
-		document.body.style.overflowY = "auto";
+		document.body.style.overflow = "auto";
 		this._headerNav.appendChild(this._headerNavTextMenu);
 		this._headerNav.appendChild(this._headerNavIconMenu);
 		this._headerNav.appendChild(this._headerNavMenuBtn);

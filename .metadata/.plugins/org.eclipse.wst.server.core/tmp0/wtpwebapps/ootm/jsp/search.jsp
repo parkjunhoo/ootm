@@ -30,7 +30,7 @@
 
     
     <body>
-        <header-component logoDark="true" logoHoverDark="true" searchBtnAction="focusToSearchBar()" mTextColor="black" bgHoverColor="#F9F9F9"></header-component>
+        <header-component logoDark="true" logoHoverDark="true" searchBtnAction="focusToSearchBar()" mTextColor="black" bgHoverColor="#F9F9F9" menuBtnColor="black"></header-component>
 
         <section id="searchResultSection">
             <div class="searchPageOuter">

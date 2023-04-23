@@ -147,7 +147,7 @@ input[type="radio"]{
         <link rel="stylesheet" type="text/css" href="/ootm/css/test.css"/>
 </head>
 <body>
-	<header-component logoDark="true" logoHoverDark="true" mTextColor="black" bgHoverColor="#F9F9F9"></header-component>	
+	<header-component logoDark="true" logoHoverDark="true" mTextColor="black" bgHoverColor="#F9F9F9" menuBtnColor="black"></header-component>	
 	<div class="header">
 		
 	</div>

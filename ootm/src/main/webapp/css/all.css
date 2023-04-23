@@ -18,7 +18,8 @@ html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, b
 .page-header{
 	margin-top: 150px;
 }
-h2{
+
+.all-margin h2{
 	font-size: 46px;
 	font-weight: 600;
 }
@@ -33,11 +34,11 @@ h2{
     content: '';
     display: table;
 }
-a{
+.all-margin  a{
 	text-decoration:none;
 	color: #222;
 }
-ul, li{
+.all-margin  ul, li{
 	list-style: none;
 }
 

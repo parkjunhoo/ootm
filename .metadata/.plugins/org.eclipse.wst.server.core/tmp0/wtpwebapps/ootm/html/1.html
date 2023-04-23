@@ -51,7 +51,7 @@
 			예정
 		</div>
 		<div class="text-center">
-			<div id="carouselExample" class="carousel slide" data-ride="carousel">
+			<div id="carouselExample" class="carousel slide" data-ride="carousel carousel-dark">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="../images/A.jpg" class="d-block w-50" alt="제품 이미지 1">
@@ -74,8 +74,13 @@
 				</a>
 			</div>
 		</div>
-
-		<button  class="buy-now-button" data-toggle="modal" data-target="#orderModal">BUY NOW</button>
+		<!-- 위시리스트 버튼 -->
+		<button class="wishlist-btn" onclick="toggleWishlist(this)">
+		  <i class="fa fa-heart-o" aria-hidden="true"></i>
+		</button>
+		<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>  
+		
+		<button class="buy-now-button" data-toggle="modal" data-target="#orderModal">BUY NOW</button>
 	</section>
 	<!-- 팝업 상품 주문 폼 -->
 
@@ -294,8 +299,8 @@
 		</ul>
 	</section>
 	
-	<!-- 푸터 -->
-	<footer-component> </footer-component>
+	
+	
 	<script>
 		function submitReview() {
 			const reviewerName = document.getElementById("reviewerName").value;
@@ -384,6 +389,18 @@
 			$('#reviewModal').modal('hide');
 			document.getElementById('reviewForm').reset();
 		}
+		
+		function toggleWishlist(btn) {
+			  var heartIcon = btn.querySelector("i");
+
+			  if (heartIcon.classList.contains("fa-heart-o")) {
+			    heartIcon.classList.remove("fa-heart-o");
+			    heartIcon.classList.add("fa-heart");
+			  } else {
+			    heartIcon.classList.remove("fa-heart");
+			    heartIcon.classList.add("fa-heart-o");
+			  }
+			}
 	</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script
@@ -392,6 +409,10 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="../component/header/header.js"></script>
 	<script src="../component/footer/footer.js"></script>
+	
+	
 </div>
+<!-- 푸터 -->
+	<footer-component> </footer-component>
 </body>
 </html>
