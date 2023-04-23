@@ -4,11 +4,11 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0
+	right: 0;
+	padding-top: 30px;
 }
 
 .checkout {
-	font-weight: bold;
 	margin-top: 150px;
 	margin-left: 50px;
 	font-size: 40pt;
