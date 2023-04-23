@@ -6,23 +6,19 @@
          header -   |headerNav
 
 */
-*{
+header p{
     font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
 }
 header{
     position: fixed;
     width: 100%;
     height: 80px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 20px;
     z-index: 970;
     overflow: visible;
-}
-header p{
-	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
-    font-size: 13px;
 }
 
 /* 헤더 호버시 내려오는 배경 */
@@ -74,7 +70,6 @@ header p{
     max-height: 100%;
     width:200px;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 /* headerNavTextMenu *//* 헤더 Text 메뉴  */
@@ -100,7 +95,7 @@ header p{
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     padding: 0 25px 0 25px;
 }
 
@@ -156,13 +151,15 @@ header p{
     left:0;
 }
 #searchExitBtnDiv{
+    top:0;
+    left:0;
     position: absolute;
     display: flex;
     justify-content: end;
     z-index: 994;
     width: 100%;
 }
-.searchExitBtn{
+#searchExitBtnDiv .searchExitBtn{
     padding: 20px 40px 0 0;
     font-size: 30px;
     cursor: pointer;
@@ -290,7 +287,7 @@ header p{
 /* 버거메뉴 버튼 width 작을때나타남*/
 #headerNavMenuBtn{
     display: none;
-    width: 80px;
+    width: 50px;
     height: 35px;
     cursor: pointer;
     align-self: center;
@@ -314,10 +311,8 @@ header p{
 	top:0;
 	left:0;
 	width:100%;
-	max-width: 100%;
 	height:100%;
 	background-color: white;
-	overflow-x:hidden;
 	overflow-y: scroll;
 	transform: translateX(100%);
 }
@@ -384,9 +379,6 @@ header p{
 	height:auto;
 	opacity:1;
 }
-#drawer .dropList li{
-	width: 50%;
-}
 #drawer .dropList *{
 	pointer-events: auto;
 	height:auto;
@@ -403,8 +395,7 @@ header #drawer .dropList p{
 
 #drawer #headerNavMenuBtn{
 	display:flex;
-	flex-direction : column;
-	height:30px;
+	height:80px;
 	position: fixed;
 	right:0;
 	top:30px;
@@ -527,15 +518,16 @@ header:hover #headerNavIconMenu svg{
 }
 
 
-#headerNavTextMenu ul , #headerNavTextMenu li{
+#headerNavTextMenu ol,#headerNavTextMenu ul {
 	list-style: none;
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	list-style: none;
+    padding-inline-start: 0px;
+   
 }
+#headerNavTextMenu p{
+ 	margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 

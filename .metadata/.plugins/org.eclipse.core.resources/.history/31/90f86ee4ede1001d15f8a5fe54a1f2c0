@@ -133,9 +133,6 @@ for(let i =0; i<searchRes.length; i++){
     let searchResItemDiv = document.createElement("div");
     searchResItemDiv.classList.add("searchResItemDiv");
     searchResultTable.appendChild(searchResItemDiv);
-    searchResItemDiv.addEventListener("click", ()=>{
-		location.href = "/ootm/html/1.html";
-	});
 
         let hoverbox = document.createElement("hoverbox-component");
         hoverbox.classList.add("searchResProduct");

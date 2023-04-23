@@ -6,27 +6,23 @@
          header -   |headerNav
 
 */
-*{
+header p{
     font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
 }
 header{
     position: fixed;
     width: 100%;
     height: 80px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 20px;
     z-index: 970;
     overflow: visible;
 }
-header p{
-	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
-    font-size: 13px;
-}
 
 /* 헤더 호버시 내려오는 배경 */
-#headerMenuBackground{
+header #headerMenuBackground{
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -50,7 +46,7 @@ header p{
 */
 
 
-#headerNav{
+header #headerNav{
     position: absolute;
     display: flex;
     width: 100%;
@@ -58,31 +54,30 @@ header p{
 }
 
 /* headerNavLogoHolder *//* 헤더 로고 div  */
-#headerNavLogoHolder{
+header #headerNavLogoHolder{
     height:80px;
     z-index: 2;
     padding: 0 25px 0 25px;
     display: flex;
     justify-content: center;
 }
-#headerNavLogoHolder a{
+header #headerNavLogoHolder a{
     align-self: center;
 }
 /* 헤더 로고 img */
-#headerLogoImg{
+header #headerLogoImg{
     height: auto;
     max-height: 100%;
     width:200px;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 /* headerNavTextMenu *//* 헤더 Text 메뉴  */
-#headerNavTextMenu{
+header #headerNavTextMenu{
     width: 60%;
 }
 /* 헤더 메뉴 리스트 클래스 */
-.menuList{
+header .menuList{
     white-space: nowrap;
     display: flex;
     width: 100%;
@@ -90,39 +85,39 @@ header p{
     color: white;
     list-style-type : none;
 }
-.menuListUnderline{
+header .menuListUnderline{
     width: 0px;
     border-bottom: 1.2px solid black;
     transition: .5s;
 }
-.menuList li>div{
+header .menuList li>div{
     width: fit-content;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     padding: 0 25px 0 25px;
 }
 
-.dropList{
+header .dropList{
     height: 0px;
     width: 0px;
     opacity: 0;
 }
-.dropList li{
+header .dropList li{
     width: fit-content;
     pointer-events : none;
 }
-.dropList li>p{
+header .dropList li>p{
     padding: 0px 25px 0 25px;
     cursor: pointer;
 }
-.dropList *{
+header .dropList *{
     height: 0px;
 }
 
 /* 헤더 아이콘메뉴 */
-#headerNavIconMenu{
+header #headerNavIconMenu{
     width: fit-content;
     height: 80px;
     display: flex;
@@ -133,7 +128,7 @@ header p{
     fill:white;
 }
 /* 헤더 아이콘메뉴 svg 조정 */
-#headerNavIconMenu > svg{
+header #headerNavIconMenu > svg{
     width: auto;
     max-height: 25px;
     padding: 0 10px;
@@ -144,7 +139,7 @@ header p{
 
 
 
-#searchBarDiv{
+header #searchBarDiv{
     display: none;
     position: fixed;
     z-index: 991;
@@ -155,20 +150,22 @@ header p{
     top:0;
     left:0;
 }
-#searchExitBtnDiv{
+header #searchExitBtnDiv{
+    top:0;
+    left:0;
     position: absolute;
     display: flex;
     justify-content: end;
     z-index: 994;
     width: 100%;
 }
-.searchExitBtn{
+header #searchExitBtnDiv .searchExitBtn{
     padding: 20px 40px 0 0;
     font-size: 30px;
     cursor: pointer;
     color:#aaa;
 }
-#searchBarDiv h1{
+header #searchBarDiv h1{
     align-self: center;
     color :#222;
     font-size: 45px;
@@ -176,7 +173,7 @@ header p{
     font-weight: bold;
 }
 
-#searchBarDiv h2{
+header #searchBarDiv h2{
     color :#222;
     font-size: 15px;
     margin-bottom: 15px;
@@ -184,7 +181,7 @@ header p{
     font-weight: bold;
 }
 
-#searchBar span{
+header #searchBar span{
     color :#aaa;
     text-decoration: none;
     font-size: 45px;
@@ -194,12 +191,12 @@ header p{
     cursor: pointer;
     
 }
-#searchBarDiv span:hover{
+header #searchBarDiv span:hover{
     transition: color .5s;
     color :black;
 }
 
-#searchBar{
+header #searchBar{
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -211,10 +208,10 @@ header p{
     background-color: #fbfbfb;
     z-index: 993;
 }
-.openSearchBar{
+header .openSearchBar{
     animation: openSearchBar .5s forwards;
 }
-.closeSearchBar{
+header .closeSearchBar{
     animation: closeSearchBar .5s forwards;
 }
 @keyframes openSearchBar {
@@ -234,25 +231,25 @@ header p{
     }
 }
 
-.searchLeftDiv{
+header .searchLeftDiv{
     padding: 12vh 0 0 10%;
     width: 43%;
     height: 100%;
     box-sizing: border-box;
 }
-.searchRightDiv{
+header .searchRightDiv{
     padding: 12vh 5% 0 0;
     width: 53%;
     height: 100%;
     box-sizing: border-box;
 }
 
-.searchInnerDiv{
+header .searchInnerDiv{
     display: flex;
     padding-bottom: 10px;
     height: 72px;
 }
-.borderBottom2{
+header .borderBottom2{
     border-bottom: 2px solid black;
 }
 
@@ -272,13 +269,13 @@ header p{
     font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
     font-weight: bold;
 }
-#headerSearchInput:focus {
+header #headerSearchInput:focus {
     outline: none;
 }
 
 
 
-#searchBarBG{
+header #searchBarBG{
     position: absolute;
     z-index: 992;
     width: 100%;
@@ -288,9 +285,9 @@ header p{
 
 
 /* 버거메뉴 버튼 width 작을때나타남*/
-#headerNavMenuBtn{
+header #headerNavMenuBtn{
     display: none;
-    width: 80px;
+    width: 50px;
     height: 35px;
     cursor: pointer;
     align-self: center;
@@ -298,7 +295,7 @@ header p{
     padding: 0 25px;
 }
 
-.headerMenuBtnIcon{
+header .headerMenuBtnIcon{
     align-self: center;
     margin-top: 10px;
     background-color: white;
@@ -308,24 +305,22 @@ header p{
 }
 
 
-#drawer{
+header #drawer{
 	position: fixed;
 	z-index: 980;
 	top:0;
 	left:0;
 	width:100%;
-	max-width: 100%;
 	height:100%;
 	background-color: white;
-	overflow-x:hidden;
 	overflow-y: scroll;
 	transform: translateX(100%);
 }
 
-.openDrawerAnim{
+header .openDrawerAnim{
     animation: openDrawer .5s forwards;
 }
-.closeDrawerAnim{
+header .closeDrawerAnim{
     animation: closeDrawer .5s forwards;
 }
 
@@ -349,14 +344,14 @@ header p{
 }
 
 
-#drawer #headerNavIconMenu{
+header #drawer #headerNavIconMenu{
 	display:flex;
 	max-width:100%;
 	width:100%;
 	fill:black;
 }
 
-#drawer #headerNavTextMenu{
+header #drawer #headerNavTextMenu{
 	display:block;
 	max-width:100%;
 	width:100%;
@@ -365,29 +360,26 @@ header p{
 	fill:black;
 }
 
-#drawer #headerNavTextMenu .dropListHeader{
+header #drawer #headerNavTextMenu .dropListHeader{
 	display: block;
 }
-#drawer #headerNavTextMenu .dropListHeader li>div{
+header #drawer #headerNavTextMenu .dropListHeader li>div{
 	height: fit-content;
 	padding: 0;
 }
-#drawer #headerNavTextMenu .dropListHeader li>div p{
+header #drawer #headerNavTextMenu .dropListHeader li>div p{
 	color: #bcbcbc;
 	font-weight: 700;
 	font-family: 'Montserrat', 'Noto Sans KR', 'sans-serif';
 	font-size : 13px;
 	padding: 12px 0 12px 3vw;
 }
-#drawer .dropList{
+header #drawer .dropList{
 	width:100%;
 	height:auto;
 	opacity:1;
 }
-#drawer .dropList li{
-	width: 50%;
-}
-#drawer .dropList *{
+header #drawer .dropList *{
 	pointer-events: auto;
 	height:auto;
 }
@@ -401,29 +393,28 @@ header #drawer .dropList p{
 }
 
 
-#drawer #headerNavMenuBtn{
+header #drawer #headerNavMenuBtn{
 	display:flex;
-	flex-direction : column;
-	height:30px;
+	height:80px;
 	position: fixed;
 	right:0;
 	top:30px;
 	fill:black;
 }
-#drawer .headerMenuBtnIcon{
+header #drawer .headerMenuBtnIcon{
 	background-color: black;
 }
 
-#drawer .menuListUnderline{
+header #drawer .menuListUnderline{
 	display:none;
 }
 
-#drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(1){
+header #drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(1){
     position: absolute;
     z-index : 985;
     transform: rotate(45deg);
 }
-#drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(2){
+header #drawer #headerNavMenuBtn:hover .headerMenuBtnIcon:nth-child(2){
     position: absolute;
     top:0;
     bottom: 10px;
@@ -527,60 +518,16 @@ header:hover #headerNavIconMenu svg{
 }
 
 
-#headerNavTextMenu ul , #headerNavTextMenu li{
+#headerNavTextMenu ol,#headerNavTextMenu ul {
 	list-style: none;
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	list-style: none;
+    padding-inline-start: 0px;
+   
+}
+#headerNavTextMenu p{
+ 	margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
