@@ -13,8 +13,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="wishlist"/>
+		<item key="selection" value="option-detail"/>
 		<list key="findhistory">
+			<item value="option-detail"/>
+			<item value="price-now"/>
 			<item value="wishlist"/>
 			<item value="wishlist-btn "/>
 			<item value=".wishlist-btn "/>
@@ -28,8 +30,6 @@
 			<item value="p"/>
 			<item value="/ootm/jsp/"/>
 			<item value="마이페이지"/>
-			<item value="sign"/>
-			<item value="input"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>

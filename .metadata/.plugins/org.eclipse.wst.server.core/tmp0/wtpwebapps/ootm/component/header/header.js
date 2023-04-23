@@ -175,15 +175,15 @@ class Header extends HTMLElement{
         this._recommendTags = [
             {
                 name:"#9부팬츠",
-                link:"/"
+                link:"/ootm/jsp/search.jsp?searchPageInput=9부팬츠"
             },
             {
                 name:"#자체제작",
-                link:"/"
+                link:"/ootm/jsp/search.jsp?searchPageInput=자체제작"
             },
             {
                 name:"#맨투맨",
-                link:"/"
+                link:"/ootm/jsp/search.jsp?searchPageInput=맨투맨"
             }
         ];
     }
@@ -349,6 +349,9 @@ class Header extends HTMLElement{
                             let span = document.createElement("span");
                             span.textContent = this._recommendTags[i].name;
                             searchInnerDiv2.appendChild(span);
+                            span.addEventListener("click", ()=>{
+								location.href = this._recommendTags[i].link;
+							})
                         }
                     
 

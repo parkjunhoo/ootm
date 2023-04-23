@@ -4,6 +4,7 @@ section {
 	margin-bottom: 20px;
 }
 
+
 button {
 	
     background-color: transparent;
@@ -149,4 +150,46 @@ info-list{
           float: right;
         }
         
+        
+        
+ .wishlist-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.wishlist-btn .fa-heart-o {
+  font-size: 1.5em;
+  color: #000;
+}
+
+.wishlist-btn .fa-heart {
+  font-size: 1.5em;
+  color: red;
+}
+.price-now , .option-detail{
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
+.carousel-control-prev-icon{
+       background-color:black;
+       filter: invert(100%);
+    }
+.carousel-control-next-icon{
+   background-color:black;
+   filter: invert(100%);
+}
+
+.price-now{
+	font-size: 32px;
+	font-weight: 700;
+	color:#222;
+}
+.option-detail{
+	font-size: 32px;
+	font-weight: 700;
+	color:#222;
+}
+
     

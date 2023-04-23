@@ -4,6 +4,7 @@ section {
 	margin-bottom: 20px;
 }
 
+
 button {
 	
     background-color: transparent;
@@ -47,7 +48,7 @@ section {
   padding-bottom: 40px;
   border-bottom: 3px solid #ccc; /* 선 색상을 원하는 대로 변경할 수 있습니다. */
 }
- ul {
+section ul {
     color: #222;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
     font-size: 15px;
@@ -149,4 +150,48 @@ info-list{
           float: right;
         }
         
+        
+        
+ .wishlist-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.wishlist-btn .fa-heart-o {
+  font-size: 1.5em;
+  color: #000;
+}
+
+.wishlist-btn .fa-heart {
+  font-size: 1.5em;
+  color: red;
+}
+.price-now , .option-detail{
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+.price-now{
+	font-size: 32px;
+	font-weight: 700;
+	color:#222222;
+}
+.option-detail{
+	margin-top:30px;
+	font-size: 12px;
+	font-weight: 300;
+	color:#222222;
+}
+
+.carousel-control-prev-icon{
+       background-color:black;
+       filter: invert(100%);
+    }
+.carousel-control-next-icon{
+   background-color:black;
+   filter: invert(100%);
+}
+
+
+
     

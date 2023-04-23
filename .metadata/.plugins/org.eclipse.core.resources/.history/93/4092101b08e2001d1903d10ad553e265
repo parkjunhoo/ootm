@@ -14,7 +14,8 @@
 	rel="stylesheet">
 
 <title>홈쇼핑웹 상품 상세 페이지</title>
-<link rel="stylesheet" href="../basic_css/1.css">
+<link rel="icon" href="/ootm/images/favicon.ico">
+<link rel="stylesheet" href="/ootm/css/1.css">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,8 +28,8 @@
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/everfree_clone-main/component/header/header.css"/>
-<link rel="stylesheet" type="text/css" href="/everfree_clone-main/component/footer/footer.css"/>
+<link rel="stylesheet" type="text/css" href="/ootm/component/header/header.css"/>
+<link rel="stylesheet" type="text/css" href="/ootm/component/footer/footer.css"/>
       <style>
         .content-container {
             margin-left: 70px;
@@ -37,11 +38,11 @@
     </style>
 </head>
 <body>
+	<header-component logoDark="true" logoHoverDark="true" mTextColor="black" bgHoverColor="#F9F9F9" menuBtnColor="black"></header-component>
 	<div class="content-container">
-	<header-component logoDark="true" logoHoverDark="true" mTextColor="black" bgHoverColor="#F9F9F9"></header-component>
 	<!-- 섹션 1: 제품 이름 및 구매 버튼 -->
 	
-	<section style="padding-top: 80px;">
+	<section style="padding-top:150px;">
 		<h1>B 라벨 카라 T - NEW</h1>
 		<span class="price-now">34,000</span>
 		<div class="option-detail">
@@ -50,7 +51,7 @@
 			예정
 		</div>
 		<div class="text-center">
-			<div id="carouselExample" class="carousel slide" data-ride="carousel">
+			<div id="carouselExample" class="carousel slide" data-ride="carousel carousel-dark">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="../images/A.jpg" class="d-block w-50" alt="제품 이미지 1">
@@ -73,8 +74,13 @@
 				</a>
 			</div>
 		</div>
-
-		<button data-toggle="modal" data-target="#orderModal">BUY NOW</button>
+		<!-- 위시리스트 버튼 -->
+		<button class="wishlist-btn" onclick="toggleWishlist(this)">
+		  <i class="fa fa-heart-o" aria-hidden="true"></i>
+		</button>
+		<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>  
+		
+		<button class="buy-now-button" data-toggle="modal" data-target="#orderModal">BUY NOW</button>
 	</section>
 	<!-- 팝업 상품 주문 폼 -->
 
@@ -126,9 +132,10 @@
 	</section>
 	<!-- 섹션 3: 리뷰 -->
 	<section>
-		<h2>리뷰</h2>
-		<button data-toggle="modal" data-target="#reviewModal">리뷰
+		<h1>리뷰</h1>
+		<button class="review_button" data-toggle="modal" data-target="#reviewModal">리뷰
 			작성하기</button>
+			<ul>리뷰 작성 시 텍스트 리뷰 500원, 포토리뷰 + 텍스트 리뷰는 1,000원, 착용샷 + 텍스트는 2,000원의 적립금을 드립니다.</ul>
 	</section>
 	<!-- 팝업 리뷰 작성 폼 -->
 	<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog"
@@ -144,9 +151,10 @@
 				</div>
 				<div class="modal-body">
 					<h3>리뷰를 남겨주세요</h3>
-					<hr>
+					
 					<div id="rating">
 						<!-- 별점 입력 부분 -->
+					
 						<fieldset class="rating">
 							<input type="radio" id="star5" name="rating" value="5" /><label
 								for="star5" title="5점">5 stars</label> <input type="radio"
@@ -160,6 +168,8 @@
 						</fieldset>
 
 					</div>
+					 <hr>
+					 <hr><hr>
 					<form id="reviewForm">
 						<div class="form-group">
 							<label for="reviewerName">이름</label> <input type="text"
@@ -205,10 +215,11 @@
 
 	<!-- 섹션 4: Q&A -->
 	<section>
-		<h1>Q&A</h1>
-		<button  data-toggle="modal" data-target="#productInquiryModal">
-  상품 문의하기
+		<h1 class="testh1">Q&A</h1>
+		<button class="Q-A_button" data-toggle="modal" data-target="#productInquiryModal">
+		상품 문의하기
 </button>
+<ul>궁금한 점이 있으신가요? 언제든지 질문해주세요.</ul>
 	</section>
 	<!-- 상품 문의하기 모달 -->
 <div class="modal fade" id="productInquiryModal" tabindex="-1" role="dialog" aria-labelledby="productInquiryModalLabel" aria-hidden="true">
@@ -255,8 +266,8 @@
 
 	<!-- 섹션 5: Shopping -->
 	<section>
-		<h1>Shopping</h1>
-		<ul class="info-list">
+		<h1 class="testh1">Shopping</h1>
+		<ul class="info-list testfont">
 			<li>OOTM 에서 구매하신 상품은 CJ 대한통운 택배를 통해 안전하게 고객님께 배송됩니다.</li>
 			<li>택배는 월~금 오후 6시에 출고되며, 토, 일 및 공휴일은 출고되지 않습니다.</li>
 			<li>주문 시 장바구니 상품 합계 금액이 50,000원 이상은 무료배송이며, 그 미만일 경우 3,000원의
@@ -270,8 +281,8 @@
 	</section>
 	<!-- 섹션 6: Returns & Refunds -->
 	<section>
-		<h1>Returns & Refunds</h1>
-		<ul class="info-list">
+		<h1 class="testh1">Returns & Refunds</h1>
+		<ul class="info-list testfont">
 			<li>상품 수령일로부터 7일 이내에는 반품 및 환불이 가능합니다. (단, 주말, 공휴일을 제외하고 수령일로부터
 				7일 이내에 OOTM에 상품이 회수되어야 가능)</li>
 			<li>아래의 사유는 환불이 불가능합니다.<br> 처음 출고된 상태와 달라진 경우 (세탁, 착용, 수선
@@ -288,8 +299,8 @@
 		</ul>
 	</section>
 	
-	<!-- 푸터 -->
-	<footer-component> </footer-component>
+	
+	
 	<script>
 		function submitReview() {
 			const reviewerName = document.getElementById("reviewerName").value;
@@ -378,6 +389,18 @@
 			$('#reviewModal').modal('hide');
 			document.getElementById('reviewForm').reset();
 		}
+		
+		function toggleWishlist(btn) {
+			  var heartIcon = btn.querySelector("i");
+
+			  if (heartIcon.classList.contains("fa-heart-o")) {
+			    heartIcon.classList.remove("fa-heart-o");
+			    heartIcon.classList.add("fa-heart");
+			  } else {
+			    heartIcon.classList.remove("fa-heart");
+			    heartIcon.classList.add("fa-heart-o");
+			  }
+			}
 	</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script
@@ -386,6 +409,10 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="../component/header/header.js"></script>
 	<script src="../component/footer/footer.js"></script>
+	
+	
 </div>
+<!-- 푸터 -->
+	<footer-component> </footer-component>
 </body>
 </html>
