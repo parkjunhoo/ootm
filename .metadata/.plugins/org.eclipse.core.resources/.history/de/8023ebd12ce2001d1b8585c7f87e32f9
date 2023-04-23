@@ -167,23 +167,23 @@
 		color:gray;
 	}
 	@keyframes slide {
-		from{
-			left:-25%;
+		0%{
+			left:-100%;
 			opacity: 0;
 		}
-		to{
+		100%{
 			left:50%;
 			opacity: 1;
 		}
 	}
 	
 	@keyframes disappear {
-		from{
+		0%{
 			left:50%;
 			opacity: 1;
 		}
-		to{
-			left:-25%;
+		100%{
+			left:-100%;
 			opacity: 0;
 		}
 	}

@@ -168,7 +168,8 @@
 	}
 	@keyframes slide {
 		from{
-			left:-25%;
+		
+			left:-100%;
 			opacity: 0;
 		}
 		to{
@@ -183,7 +184,7 @@
 			opacity: 1;
 		}
 		to{
-			left:-25%;
+			left:-100%;
 			opacity: 0;
 		}
 	}

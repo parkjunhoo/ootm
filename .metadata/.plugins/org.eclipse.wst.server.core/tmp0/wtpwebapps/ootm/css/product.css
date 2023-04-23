@@ -130,6 +130,7 @@
 		animation: slide 1s ease-out;
 		top:50%;
 		left:50%;
+		opacity: 1;
 		transform: translate(-50%,-50%);
 	}
 	
@@ -167,7 +168,7 @@
 	}
 	@keyframes slide {
 		from{
-			left:-100%;
+			left:-25%;
 			opacity: 0;
 		}
 		to{
@@ -182,7 +183,7 @@
 			opacity: 1;
 		}
 		to{
-			left:-100%;
+			left:-25%;
 			opacity: 0;
 		}
 	}
