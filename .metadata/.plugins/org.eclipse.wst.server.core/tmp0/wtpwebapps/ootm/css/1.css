@@ -172,5 +172,14 @@ info-list{
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 }
 
+.carousel-control-prev-icon{
+       background-color:black;
+       filter: invert(100%);
+    }
+.carousel-control-next-icon{
+   background-color:black;
+   filter: invert(100%);
+}
+
 
     
