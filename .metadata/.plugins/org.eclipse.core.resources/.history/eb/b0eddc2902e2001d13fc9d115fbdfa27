@@ -124,12 +124,12 @@
 	/* Outer */
 	.pic_text{
 		font-size: 8em;
+		width:258px;
 		color:white;
 		position: absolute;
+		top:220px;
+		left:800px;
 		animation: slide 1s ease-out;
-		top:50%;
-		left:50%;
-		transform: translate(-50%,-50%);
 	}
 	
 	/* 카테고리 테이블 */
@@ -164,24 +164,50 @@
 	.product-list .category span{
 		color:gray;
 	}
-	@keyframes slide {
+	
+	
+	
+	
+/* 	@keyframes slide {
 		from{
-			left:-100%;
+			left:-800px;
 			opacity: 0;
 		}
 		to{
-			left:50%;
+			left:800px;
 			opacity: 1;
 		}
 	}
 	
 	@keyframes disappear {
 		from{
-			left:50%;
+			left:800px;
 			opacity: 1;
 		}
 		to{
-			left:-100%;
+			left:-800px;
+			opacity: 0;
+		}
+	} */
+	
+		@keyframes slide {
+		from{
+			left:-800px;
+			opacity: 0;
+		}
+		to{
+			left:800px;
+			opacity: 1;
+		}
+	}
+	
+	@keyframes disappear {
+		from{
+			left:800px;
+			opacity: 1;
+		}
+		to{
+			left:-800px;
 			opacity: 0;
 		}
 	}

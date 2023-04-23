@@ -25,9 +25,9 @@
 	</head>
 	<body>
 		<!-- 헤더 -->
-		<header-component logoDark="false" logoHoverDark="true" ></header-component>
+		<header-component logoDark="false" logoHoverDark="true" menuBtnColor="black"></header-component>
 		<!-- 애니메이션 outer -->
-    	<section style="position:relative;">
+    	<section>
     		<h1 id="testID" class="pic_text">Outer</h1>
     	</section>
     	<!-- 카테고리 -->

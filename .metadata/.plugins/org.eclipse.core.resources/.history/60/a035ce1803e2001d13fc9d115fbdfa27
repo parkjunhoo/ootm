@@ -124,12 +124,10 @@
 	/* Outer */
 	.pic_text{
 		font-size: 8em;
+		width:fit-content;
 		color:white;
 		position: absolute;
 		animation: slide 1s ease-out;
-		top:50%;
-		left:50%;
-		transform: translate(-50%,-50%);
 	}
 	
 	/* 카테고리 테이블 */
@@ -166,22 +164,22 @@
 	}
 	@keyframes slide {
 		from{
-			left:-100%;
+			left:-800px;
 			opacity: 0;
 		}
 		to{
-			left:50%;
+			left:800px;
 			opacity: 1;
 		}
 	}
 	
 	@keyframes disappear {
 		from{
-			left:50%;
+			left:800px;
 			opacity: 1;
 		}
 		to{
-			left:-100%;
+			left:-800px;
 			opacity: 0;
 		}
 	}
