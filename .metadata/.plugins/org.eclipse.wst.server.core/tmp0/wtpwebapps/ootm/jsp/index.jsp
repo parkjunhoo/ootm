@@ -34,14 +34,11 @@
 
         <section id="mainPageCarouselSection">
             <carousel-component auto="3500">
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
-                <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
+                <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
+                <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
+                <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
+                <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
+                <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
             </carousel-component>
         </section>
 

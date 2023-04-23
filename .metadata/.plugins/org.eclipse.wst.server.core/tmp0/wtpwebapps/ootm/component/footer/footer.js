@@ -193,7 +193,7 @@ class Footer extends HTMLElement {
 		footerMenuDiv1.classList.add("footerMenuDiv");
 		footerContentRightDiv.appendChild(footerMenuDiv1);
 		let H5title1 = document.createElement("h5");
-		H5title1.innerText = "Everfree News";
+		H5title1.innerText = "OOTM News";
 		footerMenuDiv1.appendChild(H5title1);
 		for (let i = 0; i < 3; i++) {
 			let a = document.createElement("a");
