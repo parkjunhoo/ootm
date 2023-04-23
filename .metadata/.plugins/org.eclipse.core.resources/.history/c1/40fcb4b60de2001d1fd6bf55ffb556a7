@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<pre>
+			에러 페이지 입니다!
+			모든 여러분들 에러 없는 나날이 되길 바랍니다
+		</pre>
+		<img src="/ootm/images/error/jpg">
+	</body>
+</html>
