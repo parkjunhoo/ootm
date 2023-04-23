@@ -6,6 +6,7 @@ class Header extends HTMLElement{
      * bgColor      : 헤더의 기본 배경색을 지정합니당
      * bgHoverColor : 헤더위에 마우스를 올렸을때 내려오는 배경의 색을 지정합니다.
      * 
+     * menuBtnColor : 버거메뉴버튼 color
      * (logo 옵션은 하나만 주면안되고 둘다 지정해야합니당!!)
      * logoDark     : true = 다크로고 , false = 흰색로고
      * logoHoverDark: true = 다크로고 , false = 흰색로고
@@ -25,6 +26,12 @@ class Header extends HTMLElement{
    		
         this._logoSrc = "/ootm/images/logo.png";
         this._logoDarkSrc = "/ootm/images/logoDark.png";
+        
+        
+        //let xhr = new XMLHttpRequest();
+        //xhr.open('GET', '/ootm/get-header-menu', false);
+        //xhr.send();
+        //this._textMenuList = JSON.parse(xhr.responseText);
         
         this._textMenuList = [
             {
@@ -277,14 +284,15 @@ class Header extends HTMLElement{
             this._searchBarDiv = document.createElement("div");
             this._searchBarDiv.id = "searchBarDiv";
 
-            let SearchExitBtn = document.createElement("div");
-            SearchExitBtn.classList.add("SearchExitBtn");
+            let searchExitBtn = document.createElement("div");
+            searchExitBtn.id ="searchExitBtnDiv";
             let exitSpan = document.createElement("span");
             exitSpan.textContent = "✖";
+            exitSpan.classList.add("searchExitBtn");
             exitSpan.addEventListener("click",() => {
                 this.closeSearchBar();
             })
-            SearchExitBtn.appendChild(exitSpan);
+            searchExitBtn.appendChild(exitSpan);
 
             this._searchBar = document.createElement("div");
             this._searchBar.id = "searchBar"
@@ -297,7 +305,7 @@ class Header extends HTMLElement{
             });
 
             this._searchBarDiv.appendChild(this._searchBar);
-            this._searchBarDiv.appendChild(SearchExitBtn);
+            this._searchBarDiv.appendChild(searchExitBtn);
             this._searchBarDiv.appendChild(searchBarBG);
             header.appendChild(this._searchBarDiv);
 
@@ -417,6 +425,9 @@ class Header extends HTMLElement{
                                 let p = document.createElement("p");
                                 li.appendChild(p);
                                 p.textContent = this._textMenuList[i].subMenu[o].name;
+                                li.addEventListener("click" , () =>{
+									location.href = `/ootm/html/product.html?category=${this._textMenuList[i].subMenu[o].name}`;
+								});
                                 li.addEventListener("mouseenter", () =>{
                                     p.textContent = this._textMenuList[i].subMenu[o].korName;
                                 });
@@ -446,6 +457,9 @@ class Header extends HTMLElement{
                     let memberSVGPath = document.createElementNS("http://www.w3.org/2000/svg","path");
                     memberSVGPath.setAttribute("d","M479.956 563q-76.826 0-124.391-48.065Q308 466.87 308 390.704q0-76.167 47.406-123.935Q402.812 219 479.637 219q76.826 0 125.094 47.656Q653 314.312 653 391.204q0 75.666-48.109 123.731Q556.781 563 479.956 563ZM138 926V810.205q0-43.979 22.828-76.61T220 684q68-32 131.72-47 63.721-15 127.772-15 65.97 0 128.739 16 62.769 16 130.69 46.194 37.911 15.778 60.995 48.556Q823 765.528 823 809.945V926H138Zm91-91h502v-21q0-15.353-9.7-30.063Q711.6 769.228 697 763q-60-29-109.995-39-49.996-10-108-10Q423 714 372 724.5q-51 10.5-108.571 38.344-15.679 6.584-25.054 20.976Q229 798.212 229 814v21Zm250.796-363Q514 472 537.5 448.654t23.5-57.619q0-34.685-23.296-58.36Q514.407 309 480.204 309 446 309 422.5 332.721T399 390.54q0 34.51 23.296 57.985Q445.593 472 479.796 472Zm.204-81Zm0 444Z");
                     memberSVG.appendChild(memberSVGPath);
+                    memberSVG.addEventListener("click", ()=>{
+						location.href = "/ootm/html/login.html";
+					});
                     this._headerNavIconMenu.appendChild(memberSVG);
                     
                     let mallSVG = document.createElementNS("http://www.w3.org/2000/svg","svg");
@@ -486,11 +500,15 @@ class Header extends HTMLElement{
 
                 this._headerNavMenuBtn = document.createElement("div");
                 this._headerNavMenuBtn.id = "headerNavMenuBtn";
+                	
                     let menuBtnIcon1 = document.createElement("div");
                     menuBtnIcon1.classList.add("headerMenuBtnIcon");
                     let menuBtnIcon2 = document.createElement("div");
                     menuBtnIcon2.classList.add("headerMenuBtnIcon");
-
+					if(this.hasAttribute("menuBtnColor")){
+                        menuBtnIcon1.style.backgroundColor= this.getAttribute("menuBtnColor");
+                        menuBtnIcon2.style.backgroundColor= this.getAttribute("menuBtnColor");
+                    }
                     this._headerNavMenuBtn.appendChild(menuBtnIcon1);
                     this._headerNavMenuBtn.appendChild(menuBtnIcon2);
                		this._headerNavMenuBtn.addEventListener("click", ()=>{
@@ -539,6 +557,7 @@ class Header extends HTMLElement{
     openDrawer(){
 		if(this._isDrawOpen) return;
 		this._isDrawOpen = true;
+		this._drawer.classList.remove("closeDrawerAnim");
 		this._drawer.classList.add("openDrawerAnim");
 		document.body.style.overflowY = "hidden";
        	this._drawer.appendChild(this._headerNavIconMenu);
@@ -549,6 +568,7 @@ class Header extends HTMLElement{
 		if(!this._isDrawOpen) return;
 		this._isDrawOpen = false;
 		this._drawer.classList.remove("openDrawerAnim");
+		this._drawer.classList.add("closeDrawerAnim");
 		document.body.style.overflowY = "auto";
 		this._headerNav.appendChild(this._headerNavTextMenu);
 		this._headerNav.appendChild(this._headerNavIconMenu);

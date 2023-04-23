@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>개인 회원 가입/수정</title>
+<link rel="icon" href="/ootm/images/favicon.ico">
 <link rel="stylesheet" href="../css/all.css">
 <style type="text/css">
 .all-margin:before, .all-margin:after {

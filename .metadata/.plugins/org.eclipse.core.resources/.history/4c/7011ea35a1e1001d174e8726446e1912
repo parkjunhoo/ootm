@@ -1,0 +1,5 @@
+/**
+ * 잠시 하이퍼링크연결을 위해 임시로 만들었습니당
+ */
+
+document.getElementById("testID").textContent = new URLSearchParams(location.search).get("category");

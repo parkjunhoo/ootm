@@ -16,7 +16,7 @@
                 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/ootm/css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="/ootm/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/ootm/css/index.css"/>
         <link rel="stylesheet" type="text/css" href="/ootm/component/header/header.css"/>
         <link rel="stylesheet" type="text/css" href="/ootm/component/carousel/carousel.css"/>
         <link rel="stylesheet" type="text/css" href="/ootm/component/hoverbox/hoverbox.css"/>
@@ -31,7 +31,7 @@
 		
 
         <section id="mainPageCarouselSection">
-            <carousel-component auto="1000">
+            <carousel-component auto="3500">
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('https://yam0513.diskn.com/promo/hero/무료배송.jpg');" class="carouselItem"></div>
@@ -52,7 +52,7 @@
                         <ol class="rankingList">
                             <li>
                                 <h4>01</h4>
-                                <div class="rankingListItem">
+                                <div class="rankingListItem" onclick="location.href='/ootm/html/1.html'">
                                     <img src="https://yam0513.diskn.com/promo/hero/2021123011111.jpg" alt="">
                                     <p>
                                         신상 10% 세일
@@ -64,7 +64,7 @@
 
                             <li>
                                 <h4>02</h4>
-                                <div class="rankingListItem">
+                                <div class="rankingListItem" onclick="location.href='/ootm/html/1.html'">
                                     <img src="https://yam0513.diskn.com/t7GVcHpAoS" alt="">
                                     <p>
                                         주문폭주
@@ -76,7 +76,7 @@
 
                             <li>
                                 <h4>03</h4>
-                                <div class="rankingListItem">
+                                <div class="rankingListItem" onclick="location.href='/ootm/html/1.html'">
                                     <img src="https://yam0513.diskn.com/r7GVcHpC4y" alt="">
                                     <p>
                                         주문폭주
@@ -113,34 +113,34 @@
                     <h4 style="padding-top:20px;">Check out our New arrivals</h4>
                 </div>
                 <div class="promotionTable">
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
-                    <div class="promotionProduct">
+                    <div class="promotionProduct" onclick="location.href='/ootm/html/1.html'">
                         <div class="productBG"></div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
         
         <footer-component></footer-component>
 
-        <script src="/ootm/javascript/mainPage.js"></script>
+        <script src="/ootm/javascript/index.js"></script>
         <script src="/ootm/component/header/header.js"></script>
         <script src="/ootm/component/carousel/carousel.js"></script>
         <script src="/ootm/component/hoverbox/hoverbox.js"></script>

@@ -270,6 +270,9 @@ let basketSection = document.getElementById("basketSection");
                     let basketCheckOutBtn = document.createElement("div");
                     basketCheckOutBtn.id = "basketCheckOutBtn";
                     basketSummaryListDiv.appendChild(basketCheckOutBtn);
+                    basketCheckOutBtn.addEventListener("click", ()=>{
+						location.href = "/ootm/html/payment_members.html";
+					})
                         let btnText = document.createElement("span");
                         btnText.textContent = "CHECK OUT";
                         basketCheckOutBtn.appendChild(btnText);
