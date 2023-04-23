@@ -33,7 +33,7 @@
 		
 
         <section id="mainPageCarouselSection">
-            <carousel-component auto="3500">
+            <carousel-component auto="5000">
                 <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
                 <div class="carouselItem" style="background-image:url('/ootm/images/banner.png');" class="carouselItem"></div>
