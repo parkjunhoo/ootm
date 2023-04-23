@@ -13,23 +13,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="Outer"/>
 		<list key="findhistory">
+			<item value="outer"/>
+			<item value="tColor"/>
+			<item value="searchExitBtnDiv"/>
+			<item value="searchExitBtn"/>
+			<item value="searchExit"/>
+			<item value="search"/>
 			<item value="highlight"/>
 			<item value="highlight\"/>
-			<item value="searchExit"/>
 			<item value="org.json.simple"/>
-			<item value="searchExitBtnDiv"/>
 			<item value="SearchExitBtn"/>
 			<item value="headerMenuBt"/>
-			<item value="tColor"/>
 			<item value="href"/>
 			<item value="gref"/>
 			<item value="headerNav"/>
 			<item value="event"/>
-			<item value="h"/>
-			<item value="this._headerNavMenuBtn"/>
-			<item value="this_headerNavMenuBtn"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>

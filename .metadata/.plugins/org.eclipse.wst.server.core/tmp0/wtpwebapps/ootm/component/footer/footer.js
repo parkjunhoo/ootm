@@ -47,17 +47,16 @@ class Footer extends HTMLElement {
         `;
 
 		this._companyDesc = {
-			name: "상호 에버프리",
-			ceo: "대표 유호진",
-			addr: "광주 남구 광복마을8길 8-4 401호",
-			companyRegNum: `사업자등록번호 <a href="/">349-16-01564</a>`,
-			lawRegNum: "통신판매업신고번호 제2021-광주남구-0256 호",
-			chargeName: `개인정보담당자 유호진 <a href="/">howtomakeclothes@naver.com</a>`,
-			returnAddr: "반품주소: 61730 광주광역시 남구 회서로 22번길16,5층 에버프리",
-			account: "입금계좌: 농협은행 301-5637-7006-41 유호진(에버프리)",
-			copyright: "© 2018 Everfree, Inc. All rights reserved."
+			name: "상호 OOTM",
+			ceo: "3조",
+			addr: "경기도 세종시 멀티캠퍼스 학원",
+			companyRegNum: `사업자등록번호 <a href="/">###-##-#####</a>`,
+			lawRegNum: "통신판매업신고번호 제####-@@@@-#### 호",
+			chargeName: `개인정보담당자 주지현 <a href="/">jhjoo0221@naver.com</a>`,
+			returnAddr: "반품주소: ##### 경기도 세종시 5층 OOTM사",
+			account: "입금계좌: 농협은행 ###-####-####-## 주지현(OOTM)",
+			copyright: "© 2023 OOTM, Inc. All rights reserved."
 		};
-
 	}
 
 	connectedCallback() {

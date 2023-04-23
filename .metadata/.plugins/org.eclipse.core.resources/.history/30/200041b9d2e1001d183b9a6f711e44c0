@@ -144,6 +144,7 @@ input[type="radio"]{
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/ootm/component/header/header.css"/>
         <link rel="stylesheet" type="text/css" href="/ootm/component/footer/footer.css"/>
+        <link rel="stylesheet" type="text/css" href="/ootm/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="/ootm/css/test.css"/>
 </head>
 <body>
