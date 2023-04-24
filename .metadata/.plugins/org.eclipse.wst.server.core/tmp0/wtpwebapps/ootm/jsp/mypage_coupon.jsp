@@ -106,8 +106,10 @@ h4{
 </style>
 </head>
 <body>
-		<header-component logoDark="true" logoHoverDark="true"
-			mTextColor="black" bgHoverColor="#F9F9F9" menuBtnColor="black"></header-component>
+				<jsp:include page="/component/header/header.jsp">
+			<jsp:param value="false" name="logoDark"/>
+			<jsp:param value="true" name="logoHoverDark"/>
+		</jsp:include>
 
 	<div class="all-margin">
 		<div class="page-header">

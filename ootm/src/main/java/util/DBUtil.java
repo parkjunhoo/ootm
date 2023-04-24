@@ -17,7 +17,7 @@ import java.sql.Statement;
 public class DBUtil {
 	
 	final static String s_ip = "localhost";
-	final static String s_port = "3036";
+	final static String s_port = "3306";
 	final static String s_user = "exam";
 	final static String s_password = "exam";
 	final static String s_dbName = "ootm";

@@ -1,5 +1,4 @@
 
-
 /* -------------------------------- *//* -------------------------------- */
 
 /* 헤더
@@ -159,7 +158,7 @@ header #searchExitBtnDiv{
     z-index: 994;
     width: 100%;
 }
-header #searchExitBtnDiv .searchExitBtn{
+header #searchExitBtnDiv #searchExitBtn{
     padding: 20px 40px 0 0;
     font-size: 30px;
     cursor: pointer;

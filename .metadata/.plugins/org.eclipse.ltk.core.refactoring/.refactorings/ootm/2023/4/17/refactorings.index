@@ -5,3 +5,18 @@
 1682255897097	Rename resource 'KakaoTalk_20230423_221803698.jpg'
 1682255900319	Rename resource 'd.jpg'
 1682255953079	Rename resource 'pant1.png'
+1682344960963	Rename package 'controller'
+1682357236051	Delete element
+1682360281924	Rename package 'controller.index'
+1682360297198	Rename package 'controller.headerMenu'
+1682360387681	Rename package 'dao'
+1682360398970	Copy packages
+1682360445338	Delete element
+1682360465661	Rename package 'com.ootm.redirect'
+1682360477950	Delete element
+1682360487037	Rename package 'dao.headerMenu'
+1682360492402	Rename package 'dao.member'
+1682360497432	Rename package 'dao.member.copy'
+1682361390901	Move 'index.jsp' to 'page'
+1682362214861	Delete element
+1682363909994	Delete element

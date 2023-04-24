@@ -1,32 +1,42 @@
-<%@page import="dao.headerMenu.HeaderSubMenuDTO"%>
-<%@page import="dao.headerMenu.HeaderMenuDAOImpl"%>
-<%@page import="dao.headerMenu.HeaderMenuDTO"%>
+<%@page import="com.ootm.dao.headerMenu.HeaderSubMenuDTO"%>
+<%@page import="com.ootm.dao.headerMenu.HeaderMenuDAOImpl"%>
+<%@page import="com.ootm.dao.headerMenu.HeaderMenuDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%
+ArrayList<HeaderMenuDTO> menuList = new ArrayList<HeaderMenuDTO>();
+
+if(session.getAttribute("headerMenu") != null){
+	menuList =(ArrayList<HeaderMenuDTO>) session.getAttribute("headerMenu");
+}else{
+	RequestDispatcher rd = request.getRequestDispatcher("/select");
+	rd.include(request, response);
+}
+
+String mTextColor =  request.getParameter("mTextColor");
+String smTextColor = request.getParameter("smTextColor");
+String bgColor = request.getParameter("bgColor");
+String bgHoverColor = request.getParameter("bgHoverColor");
+String menuBtnColor = request.getParameter("menuBtnColor");
+
+String logoDarkParam = request.getParameter("logoDark");
+boolean logoDark = (logoDarkParam!=null && logoDarkParam.equals("true")) ? true : false;
+
+String logoHoverDarkParam = request.getParameter("logoHoverDark");
+boolean logoHoverDark = (logoHoverDarkParam!=null && logoHoverDarkParam.equals("true")) ? true : false;
+
+String logoPath = "/ootm/images/logo.png";
+String logoDarkPath = "/ootm/images/logoDark.png";
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 글꼴 -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        
-        
-<link rel="stylesheet" type="text/css" href="/ootm/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="/ootm/component/header/header.css" />
+	<link rel="stylesheet" type="text/css" href="/ootm/component/header/header.css"/>
 </head>
 <body>
-	<%
-	ArrayList<HeaderMenuDTO> menuList = new HeaderMenuDAOImpl().select();
-	
-	/* String mTextColor = (String)request.getAttribute("mTextColor");
-	String smTextColor = (String)request.getAttribute("smTextColor");
-	String bgColor = (String)request.getAttribute("bgColor");
-	String bgHoverColor = (String)request.getAttribute("bgHoverColor");
-	boolean logoDark = (boolean)request.getAttribute("logoDark");
-	boolean logoHoverDark = (boolean)request.getAttribute("logoHoverDark"); */
-	%>
 	<header>
 		<div id="searchBarDiv">
 			<div id="searchBar">
@@ -48,43 +58,41 @@
 				</div>
 			</div>
 			
-			<div class="searchExitBtnDiv">
+			<div id="searchExitBtnDiv">
 				<span id="searchExitBtn">✖</span>
 			</div>
 			
-			<div id="searchBarBG"></div>
+			<div onclick="closeSearchBar()" id="searchBarBG"></div>
 		</div>
 		<div id="headerNav">
 			<div id="headerMenuBackground"></div>
 			<div id="headerNavLogoHolder">
-				<a href="/ootm/jsp/index.jsp"><img id="headerLogoImg"
-					src="/ootm/images/logoDark.png"></a>
+				<a href="/ootm">
+					<%String headerLogoPath = logoDark ? logoDarkPath : logoPath; %>
+					<img id="headerLogoImg" src="<%=headerLogoPath %>">
+				</a>
 			</div>
 			<div id="headerNavTextMenu">
 				<ul class="menuList dropListHeader">
-					<%
-					for (HeaderMenuDTO hmd : menuList) {
-					%>
+					<%for (HeaderMenuDTO hmd : menuList) {%>
 					<li>
 						<div>
-							<p><%=hmd.getName()%>
-							<div class="menuListUnderline"></div>
-							</p>
+							<div>
+								<p><%=hmd.getName()%></p>
+								<div class="menuListUnderline"></div>
+							</div>
 						</div>
 						<ul class="dropList">
-							<%
-							for (HeaderSubMenuDTO hsmd : hmd.getSubMenu()) {
-							%>
-							<li onmouseover="changeText(this , '<%= hsmd.getKorName()%>')" 
+							<%for (HeaderSubMenuDTO hsmd : hmd.getSubMenu()) {%>
+							<li onclick ="window.location.href='/ootm/html/product.html?category=<%=hsmd.getName() %>'" 
+								onmouseover="changeText(this , '<%= hsmd.getKorName()%>')" 
 								onmouseleave="changeText(this , '<%= hsmd.getName()%>')">
-								<p 
-								<%if (hsmd.getHighlight()) {%> style="color: red;" <%}%>>
-								<%=hsmd.getName()%>
+								<p
+									<%if (hsmd.getHighlight()) {%> style="color: red;" <%}%>>
+									<%=hsmd.getName()%>
 								</p>
 							</li>
-							<%
-							}
-							%>
+							<%}%>
 						</ul>
 					</li>
 					<%
@@ -121,11 +129,17 @@
 		let _bgColor = <%=bgColor %>;
 		let _bgHoverColor = <%=bgHover %>; --%>
 		
+		let header = document.getElementsByTagName("header")[0];
+		header.addEventListener("mouseover", headerMouseOver);
+		header.addEventListener("mouseleave", headerMouseLeave);
+		
 		let _searchBarDiv = document.getElementById("searchBarDiv");
 		let _searchBar = document.getElementById("searchBar");
 		
 		let _drawer = document.getElementById("drawer");
 		let _isDrawOpen = false;
+		
+		let _headerLogoImg = document.getElementById("headerLogoImg");
 		
 		let _headerNav = document.getElementById("headerNav");
 		let _headerNavTextMenu = document.getElementById("headerNavTextMenu");
@@ -177,7 +191,7 @@
 			_isDrawOpen = true;
 			_drawer.classList.remove("closeDrawerAnim");
 			_drawer.classList.add("openDrawerAnim");
-			document.body.style.overflowY = "hidden";
+			document.body.style.overflow = "hidden";
 	       	_drawer.appendChild(_headerNavIconMenu);
 	       	_drawer.appendChild(_headerNavMenuBtn);
 	       	_drawer.appendChild(_headerNavTextMenu);
@@ -187,17 +201,32 @@
 			_isDrawOpen = false;
 			_drawer.classList.remove("openDrawerAnim");
 			_drawer.classList.add("closeDrawerAnim");
-			setTimeout(() =>{
-				document.body.style.overflowY = "auto";
-				_headerNav.appendChild(_headerNavTextMenu);
-				_headerNav.appendChild(_headerNavIconMenu);
-				_headerNav.appendChild(_headerNavMenuBtn);
-			}, 500);
-			
+			document.body.style.overflow = "auto";
+			_headerNav.appendChild(_headerNavTextMenu);
+			_headerNav.appendChild(_headerNavIconMenu);
+			_headerNav.appendChild(_headerNavMenuBtn);
 		}
 	    
 	    function changeText(el , str){
 	    	el.firstElementChild.textContent = str;
+	    }
+	    
+	    function headerMouseOver(){
+	    	if(window.innerWidth< 1100) return;
+           <%if(logoHoverDark){ %>
+          		_headerLogoImg.src = "<%=logoDarkPath%>";
+           <%}else{%>
+          		 _headerLogoImg.src = "<%=logoPath%>";
+           <%}%>
+	    }
+	    
+	    function headerMouseLeave(){
+	    	if(window.innerWidth< 1100) return;
+            <%if(logoDark){ %>
+            	_headerLogoImg.src = "<%=logoDarkPath%>";
+          	<%}else{%>
+          		_headerLogoImg.src = "<%=logoPath%>";
+          	<%}%>
 	    }
 	    
 	</script>
