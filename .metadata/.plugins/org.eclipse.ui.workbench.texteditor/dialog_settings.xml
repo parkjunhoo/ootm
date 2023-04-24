@@ -13,8 +13,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="option-detail"/>
+		<item key="selection" value="News"/>
 		<list key="findhistory">
+			<item value="news"/>
 			<item value="option-detail"/>
 			<item value="price-now"/>
 			<item value="wishlist"/>
@@ -29,7 +30,6 @@
 			<item value="ul"/>
 			<item value="p"/>
 			<item value="/ootm/jsp/"/>
-			<item value="마이페이지"/>
 		</list>
 		<list key="replacehistory">
 			<item value="this._headerNavMenuBtn"/>

@@ -15,6 +15,13 @@ import java.sql.Statement;
  * 3. 자원반납
  */
 public class DBUtil {
+	
+	final static String s_ip = "localhost";
+	final static String s_port = "3036";
+	final static String s_user = "exam";
+	final static String s_password = "exam";
+	final static String s_dbName = "ootm";
+	
 	// 드라이버로딩 - DBUtil클래스가 로딩될때 자동으로 드라이버가 로딩되도록 작업
 	// => static{}에 정의한 코드는 DBUtil클래스가 클래스로더에 의해 메모리에 로딩될때 자동으로 실행된다.
 	// 따라서 코드가 한 번 실행되도록 할 수 있다.
@@ -40,7 +47,15 @@ public class DBUtil {
 		}
 		return con;
 	}
+	
+	//상수값으로 정의된 값들로 getConnect를 호출합니다.
+	public static Connection getConnect() {
+		return DBUtil.getConnect(DBUtil.s_ip , DBUtil.s_port , DBUtil.s_user , DBUtil.s_password , DBUtil.s_dbName);
+	}
 
+	
+	
+	
 	// 자원반납을 위한 메소드
 	public static void close(ResultSet rs, Statement stmt, Connection con) {
 		try {
@@ -53,6 +68,11 @@ public class DBUtil {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	// rs가 없을떄 null 쓰기 귀찮을때
+	public static void close(Statement stmt, Connection con) {
+		DBUtil.close(null, stmt , con);
 	}
 
 }
